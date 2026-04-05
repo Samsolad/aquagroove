@@ -250,9 +250,100 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   .footer-top{grid-template-columns:1fr}
   .steps{gap:2.5rem}
 }
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(13,13,13,0.97);backdrop-filter:blur(12px);border-top:1px solid rgba(201,149,42,0.2);padding:1.25rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)}
+.cookie-banner.visible{transform:translateY(0)}
+.cookie-text{flex:1;min-width:260px}
+.cookie-text p{font-size:0.82rem;color:rgba(245,237,216,0.6);line-height:1.6}
+.cookie-text a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,149,42,0.3)}
+.cookie-text a:hover{color:var(--gold-light)}
+.cookie-text strong{color:rgba(245,237,216,0.9);font-weight:500}
+.cookie-actions{display:flex;gap:0.75rem;flex-shrink:0;flex-wrap:wrap}
+.cookie-btn{padding:0.6rem 1.25rem;border-radius:2rem;font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:var(--sans);white-space:nowrap;border:none}
+.cookie-btn-accept{background:var(--gold);color:var(--earth)}
+.cookie-btn-accept:hover{background:var(--gold-light)}
+.cookie-btn-necessary{background:transparent;color:rgba(245,237,216,0.5);border:1px solid rgba(217,201,168,0.2)}
+.cookie-btn-necessary:hover{border-color:rgba(217,201,168,0.5);color:rgba(245,237,216,0.8)}
+.cookie-btn-manage{background:transparent;color:rgba(245,237,216,0.4);border:1px solid rgba(217,201,168,0.12);font-size:0.75rem}
+.cookie-btn-manage:hover{border-color:rgba(217,201,168,0.35);color:rgba(245,237,216,0.7)}
+.cookie-modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.7);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.cookie-modal-overlay.visible{opacity:1;pointer-events:all}
+.cookie-modal{background:var(--earth);border-radius:1.5rem 1.5rem 0 0;padding:2rem 2.5rem;width:100%;max-width:640px;max-height:85vh;overflow-y:auto;border-top:3px solid var(--gold)}
+.cookie-modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+.cookie-modal-header h3{font-family:var(--serif);font-size:1.4rem;color:var(--cream)}
+.cookie-close{background:none;border:none;color:rgba(245,237,216,0.4);font-size:1.25rem;cursor:pointer;padding:0.25rem;line-height:1;transition:color 0.2s}
+.cookie-close:hover{color:var(--cream)}
+.cookie-modal>p{font-size:0.85rem;color:rgba(245,237,216,0.5);line-height:1.7;margin-bottom:1.5rem}
+.cookie-category{border:1px solid rgba(217,201,168,0.1);border-radius:1rem;padding:1.25rem;margin-bottom:1rem}
+.cookie-cat-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
+.cookie-cat-header h4{font-size:0.9rem;font-weight:500;color:var(--cream)}
+.cookie-cat-desc{font-size:0.8rem;color:rgba(245,237,216,0.4);line-height:1.6}
+.toggle{position:relative;width:40px;height:22px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-slider{position:absolute;inset:0;background:rgba(245,237,216,0.1);border-radius:22px;cursor:pointer;transition:background 0.25s;border:1px solid rgba(217,201,168,0.2)}
+.toggle-slider::before{content:'';position:absolute;width:16px;height:16px;left:2px;top:2px;background:rgba(245,237,216,0.4);border-radius:50%;transition:transform 0.25s,background 0.25s}
+.toggle input:checked+.toggle-slider{background:var(--teal);border-color:var(--teal-light)}
+.toggle input:checked+.toggle-slider::before{transform:translateX(18px);background:white}
+.toggle input:disabled+.toggle-slider{opacity:0.5;cursor:not-allowed}
+.cookie-required-tag{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);background:rgba(201,149,42,0.1);padding:0.25rem 0.6rem;border-radius:1rem;border:1px solid rgba(201,149,42,0.2)}
+.cookie-modal-footer{display:flex;gap:0.75rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(217,201,168,0.1);flex-wrap:wrap}
+.cookie-modal-footer .cookie-btn{flex:1;min-width:130px;text-align:center;padding:0.75rem}
+.cookie-revisit{position:fixed;bottom:1.5rem;left:1.5rem;z-index:90;background:rgba(13,13,13,0.8);border:1px solid rgba(201,149,42,0.2);border-radius:2rem;padding:0.4rem 0.9rem;font-size:0.7rem;color:rgba(245,237,216,0.4);cursor:pointer;transition:all 0.2s;font-family:var(--sans);backdrop-filter:blur(8px)}
+.cookie-revisit:hover{color:var(--gold);border-color:rgba(201,149,42,0.4)}
 </style>
 </head>
 <body>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">
+    <p><strong>We use cookies on this website.</strong> Some are essential for the site to work. Others help us understand how you use Aquagroove so we can improve your experience. Under UK GDPR, we need your consent before setting non-essential cookies. <a href="#" onclick="return false;">Cookie Policy</a></p>
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-manage" id="cookieManageBtn">Manage Preferences</button>
+    <button class="cookie-btn cookie-btn-necessary" id="cookieNecessaryBtn">Necessary Only</button>
+    <button class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept All</button>
+  </div>
+</div>
+
+<!-- COOKIE MODAL -->
+<div class="cookie-modal-overlay" id="cookieModal">
+  <div class="cookie-modal">
+    <div class="cookie-modal-header">
+      <h3>Cookie Preferences</h3>
+      <button class="cookie-close" id="cookieCloseBtn">✕</button>
+    </div>
+    <p>We use cookies to give you the best experience on Aquagroove. Choose which types you're happy for us to use. You can change your mind at any time by clicking the cookie icon in the bottom-left corner.</p>
+    <div class="cookie-category">
+      <div class="cookie-cat-header">
+        <h4>Strictly Necessary</h4>
+        <span class="cookie-required-tag">Always On</span>
+      </div>
+      <p class="cookie-cat-desc">These cookies are essential for the website to function. They cannot be switched off. They are usually set in response to actions you take — such as setting privacy preferences or filling in forms.</p>
+    </div>
+    <div class="cookie-category">
+      <div class="cookie-cat-header">
+        <h4>Analytics & Performance</h4>
+        <label class="toggle"><input type="checkbox" id="toggleAnalytics"/><span class="toggle-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">These cookies help us understand how visitors interact with Aquagroove — which pages are visited most, where people drop off, and how we can improve. All data is anonymised.</p>
+    </div>
+    <div class="cookie-category">
+      <div class="cookie-cat-header">
+        <h4>Marketing & Social Media</h4>
+        <label class="toggle"><input type="checkbox" id="toggleMarketing"/><span class="toggle-slider"></span></label>
+      </div>
+      <p class="cookie-cat-desc">These cookies allow us to show you relevant Aquagroove content across social platforms like Instagram, Facebook, and YouTube. They may be set by our social media partners.</p>
+    </div>
+    <div class="cookie-modal-footer">
+      <button class="cookie-btn cookie-btn-necessary" id="modalNecessaryBtn">Necessary Only</button>
+      <button class="cookie-btn cookie-btn-accept" id="modalSaveBtn">Save My Choices</button>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE REVISIT -->
+<button class="cookie-revisit" id="cookieRevisit" title="Cookie preferences">🍪 Cookies</button>
 
 <!-- NAV -->
 <nav id="nav">
@@ -502,36 +593,41 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
     <p class="section-intro">Whether you want to experience Aquagroove as a member, attend a single event, or bring it to your city — there's a place for you.</p>
     <div class="pricing-grid">
       <div class="price-card fade-in">
-        <div class="price-label">Day Pass</div>
-        <div class="price-amount" style="color:var(--earth)">£20</div>
+        <div class="price-label">Taster Pass</div>
+        <div class="price-amount" style="color:var(--earth)">£15</div>
         <div class="price-period">per event · mixer only</div>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li><span class="pf-check">✓</span>Monthly cultural mixer</li>
           <li><span class="pf-check">✓</span>Food &amp; music included</li>
-          <li><span class="pf-check">✓</span>Community connection</li>
-          <li><span class="pf-check">✓</span>No commitment</li>
+          <li><span class="pf-check">✓</span>No commitment required</li>
+          <li><span class="pf-check" style="opacity:0.35">✗</span><span style="opacity:0.45">Swim &amp; dance sessions</span></li>
+          <li><span class="pf-check" style="opacity:0.35">✗</span><span style="opacity:0.45">Priority booking</span></li>
+          <li><span class="pf-check" style="opacity:0.35">✗</span><span style="opacity:0.45">Members community</span></li>
         </ul>
-        <button class="price-btn price-btn-outline">Get a Ticket</button>
+        <button class="price-btn price-btn-outline">Get a Taster Ticket</button>
+        <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;line-height:1.5">Want to come back? Founding membership is just £5 more per month — and you'll never pay per session again.</p>
       </div>
       <div class="price-card featured fade-in" style="transition-delay:0.1s">
-        <div class="featured-badge">Founding Member</div>
-        <div class="price-label">Full Membership</div>
+        <div class="featured-badge">⏳ 30 Spots Only</div>
+        <div class="price-label">Founding Membership</div>
         <div class="price-amount">£40</div>
-        <div class="price-period">per month · locked for 12 months</div>
+        <div class="price-period">per month · rate locked for 12 months</div>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>2× guided swim sessions/month</li>
           <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>2× dance sessions/month</li>
           <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Monthly cultural mixer</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Members-only community</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Priority booking — members first</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Members-only community access</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Named on Chapter One founding wall</li>
           <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Founding Member certificate</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Price locked — standard is £60/mo</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">✓</span>Rate locked — standard rises to £60/mo</li>
         </ul>
-        <button class="price-btn price-btn-gold">Claim Your Spot</button>
+        <button class="price-btn price-btn-gold">Claim Your Founding Spot</button>
       </div>
       <div class="price-card fade-in" style="transition-delay:0.2s">
-        <div class="price-label">Full Day Experience</div>
+        <div class="price-label">Day Experience</div>
         <div class="price-amount" style="color:var(--earth)">£35</div>
         <div class="price-period">per event · all three sessions</div>
         <div class="price-divider"></div>
@@ -539,9 +635,12 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
           <li><span class="pf-check">✓</span>Swim session</li>
           <li><span class="pf-check">✓</span>Dance session</li>
           <li><span class="pf-check">✓</span>Cultural mixer</li>
-          <li><span class="pf-check">✓</span>Full day experience</li>
+          <li><span class="pf-check">✓</span>Walk-up subject to availability</li>
+          <li><span class="pf-check" style="opacity:0.35">✗</span><span style="opacity:0.45">Priority booking</span></li>
+          <li><span class="pf-check" style="opacity:0.35">✗</span><span style="opacity:0.45">Members community &amp; exclusives</span></li>
         </ul>
-        <button class="price-btn price-btn-teal">Book a Full Day</button>
+        <button class="price-btn price-btn-teal">Book a Day</button>
+        <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;line-height:1.5">Attend once to experience it. Members always get priority access to every session.</p>
       </div>
     </div>
   </div>
@@ -688,7 +787,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
           <li><a href="https://instagram.com">Instagram</a></li>
           <li><a href="https://facebook.com">Facebook</a></li>
           <li><a href="https://youtube.com">YouTube</a></li>
-          <li><a href="mailto:hello@aquagroove.com">hello@aquagroove.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#d2bab7bebebd92b3a3a7b3b5a0bdbda4b7fcb1bdbf"><span class="__cf_email__" data-cfemail="1f777a7373705f7e6e6a7e786d7070697a317c7072">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
@@ -699,7 +798,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -728,7 +827,7 @@ document.querySelector('.newsletter-form button').addEventListener('click', func
   const input = document.querySelector('.newsletter-form input');
   if (input.value && input.value.includes('@')) {
     this.textContent = 'You\'re on the list ✦';
-    this.style.background = '#1B6B5A';
+    e = 'background:#1B6B5A';
     input.value = '';
     input.placeholder = 'See you soon!';
   } else {
@@ -736,6 +835,69 @@ document.querySelector('.newsletter-form button').addEventListener('click', func
     setTimeout(() => input.style.borderColor = '', 1500);
   }
 });
+
+// ── COOKIE CONSENT ────────────────────────────────────────────────
+const COOKIE_KEY = 'aq_cookie_consent';
+
+function getCookieConsent() {
+  try { return JSON.parse(localStorage.getItem(COOKIE_KEY)); } catch { return null; }
+}
+
+function setCookieConsent(prefs) {
+  localStorage.setItem(COOKIE_KEY, JSON.stringify({...prefs, ts: Date.now()}));
+}
+
+const banner   = document.getElementById('cookieBanner');
+const modal    = document.getElementById('cookieModal');
+const revisit  = document.getElementById('cookieRevisit');
+const togAna   = document.getElementById('toggleAnalytics');
+const togMkt   = document.getElementById('toggleMarketing');
+
+function showBanner() {
+  setTimeout(() => banner.classList.add('visible'), 800);
+}
+
+function hideBanner() {
+  banner.classList.remove('visible');
+  revisit.style.display = 'block';
+}
+
+function openModal() {
+  const prefs = getCookieConsent();
+  if (prefs) { togAna.checked = !!prefs.analytics; togMkt.checked = !!prefs.marketing; }
+  modal.classList.add('visible');
+}
+
+function closeModal() { modal.classList.remove('visible'); }
+
+function acceptAll() {
+  setCookieConsent({necessary:true, analytics:true, marketing:true});
+  hideBanner(); closeModal();
+}
+
+function necessaryOnly() {
+  setCookieConsent({necessary:true, analytics:false, marketing:false});
+  hideBanner(); closeModal();
+}
+
+function saveChoices() {
+  setCookieConsent({necessary:true, analytics:togAna.checked, marketing:togMkt.checked});
+  hideBanner(); closeModal();
+}
+
+// Wire up buttons
+document.getElementById('cookieAcceptBtn').addEventListener('click', acceptAll);
+document.getElementById('cookieNecessaryBtn').addEventListener('click', necessaryOnly);
+document.getElementById('cookieManageBtn').addEventListener('click', () => { openModal(); });
+document.getElementById('cookieCloseBtn').addEventListener('click', closeModal);
+document.getElementById('modalNecessaryBtn').addEventListener('click', necessaryOnly);
+document.getElementById('modalSaveBtn').addEventListener('click', saveChoices);
+revisit.addEventListener('click', () => { openModal(); });
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+// Init
+const existing = getCookieConsent();
+if (!existing) { showBanner(); } else { revisit.style.display = 'block'; }
 </script>
 </body>
 </html>
