@@ -841,10 +841,10 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-window.openTicketModal=function(){document.getElementById('ticketModal').classList.add('active');document.body.style.overflow='hidden';}
-window.closeTicketModal=function(){document.getElementById('ticketModal').classList.remove('active');document.body.style.overflow='';}
+function openTicketModal(){document.getElementById('ticketModal').classList.add('active');document.body.style.overflow='hidden';}
+function closeTicketModal(){document.getElementById('ticketModal').classList.remove('active');document.body.style.overflow='';}
 document.addEventListener('DOMContentLoaded',function(){var m=document.getElementById('ticketModal');if(m)m.addEventListener('click',function(e){if(e.target===this)closeTicketModal();});});
-window.handleTicketEmail=function(e){e.preventDefault();var em=e.target.querySelector('input').value;window.location.href='mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Waitlist&body=Hi!%20Please%20add%20me%20to%20the%20Aquagroove%20Newcastle%20waitlist.%0A%0AEmail:%20'+encodeURIComponent(em);closeTicketModal();}
+function handleTicketEmail(e){e.preventDefault();var em=e.target.querySelector('input').value;window.location.href='mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Waitlist&body=Hi!%20Please%20add%20me%20to%20the%20Aquagroove%20Newcastle%20waitlist.%0A%0AEmail:%20'+encodeURIComponent(em);closeTicketModal();}
 </script><script>
 // Nav â hide on scroll down, show on scroll up, bg on scroll
 const nav = document.getElementById('nav');
@@ -986,5 +986,6 @@ if (!existing) { showBanner(); } else { revisit.style.display = 'block'; }
     </form>
   </div>
 </div>
+<script>function openTicketModal(){document.getElementById('ticketModal').classList.add('active');document.body.style.overflow='hidden';}function closeTicketModal(){document.getElementById('ticketModal').classList.remove('active');document.body.style.overflow='';}document.addEventListener('DOMContentLoaded',function(){var m=document.getElementById('ticketModal');if(m)m.addEventListener('click',function(e){if(e.target===this)closeTicketModal();});});</script>
 </body>
 </html>
