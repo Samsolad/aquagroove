@@ -298,27 +298,33 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
 .cookie-revisit{position:fixed;bottom:1.5rem;left:1.5rem;z-index:90;background:rgba(13,13,13,0.8);border:1px solid rgba(201,149,42,0.2);border-radius:2rem;padding:0.4rem 0.9rem;font-size:0.7rem;color:rgba(245,237,216,0.4);cursor:pointer;transition:all 0.2s;font-family:var(--sans);backdrop-filter:blur(8px)}
 .cookie-revisit:hover{color:var(--gold);border-color:rgba(201,149,42,0.4)}
 
-.ticket-overlay{position:fixed;inset:0;z-index:2000;background:rgba(10,6,2,0.88);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;backdrop-filter:blur(4px)}
-.ticket-overlay.active{opacity:1;pointer-events:all}
-.ticket-modal-card{background:#1a0e05;border:1px solid rgba(201,168,76,0.2);border-radius:16px;padding:40px 36px;max-width:440px;width:calc(100% - 40px);position:relative;color:#f4f0e8}
-.ticket-modal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(244,240,232,0.5);font-size:24px;cursor:pointer;line-height:1}
-.ticket-modal-eyebrow{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.3em;color:#C9A84C;text-transform:uppercase;margin:0 0 8px}
-.ticket-modal-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#f4f0e8;margin:0 0 8px}
-.ticket-modal-sub{font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(244,240,232,0.6);margin:0 0 28px;letter-spacing:0.1em}
-.ticket-tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:24px}
-.ticket-tier{background:rgba(244,240,232,0.05);border:1px solid rgba(244,240,232,0.1);border-radius:10px;padding:14px 10px;text-align:center;display:flex;flex-direction:column;gap:4px}
-.ticket-tier.featured{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.08)}
-.tier-name{font-family:'DM Sans',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:rgba(244,240,232,0.6)}
-.tier-price{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#f4f0e8}
-.ticket-tier.featured .tier-price{color:#C9A84C}
-.tier-note{font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(244,240,232,0.4)}
-.ticket-modal-info{font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(244,240,232,0.6);margin:0 0 10px}
-.ticket-modal-cta{display:block;background:#C9A84C;color:#1a0e05;text-align:center;padding:14px;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:0.08em;margin-bottom:20px}
-.ticket-modal-cta:hover{background:#d4b86a}
-.ticket-modal-footer{font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(244,240,232,0.4);margin:0 0 12px;text-align:center}
-.ticket-email-form{display:flex;gap:8px}
-.ticket-email-input{flex:1;background:rgba(244,240,232,0.08);border:1px solid rgba(244,240,232,0.15);border-radius:100px;padding:12px 16px;color:#f4f0e8;font-family:'DM Sans',sans-serif;font-size:13px;outline:none}
-.ticket-email-btn{background:none;border:1px solid rgba(201,168,76,0.5);border-radius:100px;padding:12px 16px;color:#C9A84C;font-family:'DM Sans',sans-serif;font-size:12px;cursor:pointer;white-space:nowrap}
+.ticket-overlay{position:fixed;inset:0;z-index:2000;background:rgba(13,13,13,0.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.4s}
+.ticket-overlay.visible{opacity:1;pointer-events:all}
+.ticket-modal{background:var(--cream);border-radius:1.5rem;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 40px 80px rgba(0,0,0,0.4)}
+.ticket-modal-body{padding:2rem;display:flex;flex-direction:column;gap:0.75rem}
+.ticket-modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;background:rgba(13,13,13,0.6);border:none;color:white;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background 0.2s;z-index:10}
+.ticket-modal-close:hover{background:var(--rust)}
+.ticket-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.ticket-title{font-family:var(--serif);font-size:1.6rem;color:var(--earth);line-height:1.15;margin-bottom:0.25rem}
+.ticket-date{font-size:0.85rem;color:var(--mid);margin-bottom:0.5rem}
+.ticket-divider{height:1px;background:var(--line);margin:0.25rem 0}
+.ticket-tier{border:1px solid var(--line);border-radius:1rem;padding:1rem;transition:border-color 0.2s,transform 0.2s;cursor:pointer}
+.ticket-tier:hover{border-color:var(--gold);transform:translateY(-1px)}
+.ticket-tier.featured{background:var(--earth);border-color:var(--gold)}
+.ticket-tier-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem}
+.ticket-tier-name{font-weight:500;font-size:0.9rem;color:var(--earth)}
+.ticket-tier.featured .ticket-tier-name{color:var(--cream)}
+.ticket-tier-price{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold)}
+.ticket-tier-detail{font-size:0.75rem;color:var(--mid);line-height:1.5}
+.ticket-tier.featured .ticket-tier-detail{color:rgba(245,237,216,0.5)}
+.ticket-cta{display:block;text-align:center;background:var(--gold);color:var(--earth);padding:0.9rem;border-radius:3rem;font-weight:500;font-size:0.95rem;text-decoration:none;transition:background 0.2s;margin-top:0.5rem;border:none;cursor:pointer;font-family:var(--sans);width:100%}
+.ticket-cta:hover{background:var(--gold-light)}
+.ticket-float{position:fixed;bottom:5.5rem;right:2rem;z-index:90;background:var(--gold);color:var(--earth);border:none;border-radius:3rem;padding:0.65rem 1.25rem;font-size:0.8rem;font-weight:500;cursor:pointer;font-family:var(--sans);display:flex;align-items:center;gap:0.5rem;box-shadow:0 4px 20px rgba(201,149,42,0.4);transition:all 0.25s;white-space:nowrap}
+.ticket-float:hover{background:var(--gold-light);transform:translateY(-2px)}
+@media(max-width:640px){
+  .ticket-modal-close{top:0.75rem;right:0.75rem}
+  .ticket-float{bottom:4.5rem;right:1rem;font-size:0.75rem;padding:0.5rem 1rem}
+}
 </style>
 </head>
 <body>
@@ -840,58 +846,89 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   </div>
 </footer>
 
-<!-- TICKET MODAL -->
-<div id="ticketModal" class="ticket-overlay" role="dialog" aria-modal="true" aria-label="Book Your Spot">
-  <div class="ticket-modal-card">
-    <button class="ticket-modal-close" onclick="closeTicketModal()" aria-label="Close">&times;</button>
-    <p class="ticket-modal-eyebrow">Chapter One &middot; Newcastle</p>
-    <h2 class="ticket-modal-title">Saturday 6th June 2026</h2>
-    <p class="ticket-modal-sub">Swim &middot; Dance &middot; Connect &middot; Small Chops &middot; Only 50 Tickets</p>
-    <div class="ticket-tiers">
-      <div class="ticket-tier"><span class="tier-name">Early Bird</span><span class="tier-price">&pound;12</span><span class="tier-note">First 10 spots</span></div>
-      <div class="ticket-tier featured"><span class="tier-name">Standard</span><span class="tier-price">&pound;18</span><span class="tier-note">General admission</span></div>
-      <div class="ticket-tier"><span class="tier-name">Pair</span><span class="tier-price">&pound;30</span><span class="tier-note">Two people</span></div>
+<!-- TICKET POPUP -->
+<div class="ticket-overlay" id="ticketOverlay" role="dialog" aria-modal="true" aria-label="Get Tickets">
+  <div class="ticket-modal">
+    <button class="ticket-modal-close" id="ticketClose" type="button" aria-label="Close">X</button>
+    <div class="ticket-modal-body">
+      <div class="ticket-label">Chapter One &middot; Newcastle</div>
+      <h2 class="ticket-title">Aquagroove<br>6th June 2026</h2>
+      <p class="ticket-date">City Baths, Newcastle &nbsp;&middot;&nbsp; 1PM - 4PM &nbsp;&middot;&nbsp; Limited to 20</p>
+      <div class="ticket-divider"></div>
+
+      <a href="https://buy.stripe.com/14A7sN6Ih82De2b2TX9IQ00" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+      <div class="ticket-tier featured">
+        <div class="ticket-tier-header">
+          <span class="ticket-tier-name">Full Day Pass</span>
+          <span class="ticket-tier-price">&pound;30</span>
+        </div>
+        <div class="ticket-tier-detail">Swim (75 min) &middot; Dance/Cardio (75 min) &middot; Cultural Mixer (30 min)<br>Best value - all three sessions</div>
+      </div></a>
+
+      <a href="https://buy.stripe.com/8x200l6Ih96H3nx3Y19IQ01" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+      <div class="ticket-tier">
+        <div class="ticket-tier-header">
+          <span class="ticket-tier-name">Swim Session</span>
+          <span class="ticket-tier-price">&pound;20</span>
+        </div>
+        <div class="ticket-tier-detail">75 minutes &middot; Guided community swim</div>
+      </div></a>
+
+      <a href="https://buy.stripe.com/00w14pgiR5Uve2b3Y19IQ02" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+      <div class="ticket-tier">
+        <div class="ticket-tier-header">
+          <span class="ticket-tier-name">Dance / Cardio</span>
+          <span class="ticket-tier-price">&pound;20</span>
+        </div>
+        <div class="ticket-tier-detail">75 minutes &middot; African &amp; Caribbean cardio dance</div>
+      </div></a>
+
+      <a href="https://buy.stripe.com/28EdRb3w582D9LVcux9IQ03" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+      <div class="ticket-tier">
+        <div class="ticket-tier-header">
+          <span class="ticket-tier-name">Cultural Mixer</span>
+          <span class="ticket-tier-price">&pound;15</span>
+        </div>
+        <div class="ticket-tier-detail">30 minutes &middot; Food, drinks &amp; community</div>
+      </div></a>
+
+      <div class="ticket-divider"></div>
+      <a href="https://buy.stripe.com/14A7sN6Ih82De2b2TX9IQ00" target="_blank" rel="noopener noreferrer" class="ticket-cta">Buy Full Day Ticket - &pound;30</a>
     </div>
-    <a href="mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Ticket%20Request%20%E2%80%94%20June%206&body=Hi!%20I'd%20like%20to%20book%20a%20ticket%20for%20Aquagroove%20Newcastle%20on%20June%206%2C%202026.%0A%0AName%3A%0ATicket%20type%20(Early%20Bird%20%2F%20Standard%20%2F%20Pair)%3A%0ANumber%20of%20tickets%3A" class="ticket-modal-cta">Secure Your Spot &mdash; Email to Book</a>
-    <p class="ticket-modal-footer">Or join the waitlist and we'll send booking details directly.</p>
-    <form class="ticket-email-form" onsubmit="handleTicketEmail(event)">
-      <input type="email" placeholder="Your email address" required class="ticket-email-input">
-      <button type="submit" class="ticket-email-btn">Join List</button>
-    </form>
   </div>
 </div>
 
+<button class="ticket-float" id="ticketFloat" type="button">Get Tickets</button>
+
 <script data-cfasync="false">
 window.openTicketModal = function () {
-  var modal = document.getElementById('ticketModal');
-  if (!modal) return;
-  modal.classList.add('active');
+  var overlay = document.getElementById('ticketOverlay');
+  if (!overlay) return;
+  overlay.classList.add('visible');
   document.body.style.overflow = 'hidden';
 };
 window.closeTicketModal = function () {
-  var modal = document.getElementById('ticketModal');
-  if (!modal) return;
-  modal.classList.remove('active');
+  var overlay = document.getElementById('ticketOverlay');
+  if (!overlay) return;
+  overlay.classList.remove('visible');
   document.body.style.overflow = '';
 };
-window.handleTicketEmail = function (e) {
-  e.preventDefault();
-  var em = e.target.querySelector('input').value;
-  window.location.href = 'mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Waitlist&body=Hi!%20Please%20add%20me%20to%20the%20Aquagroove%20Newcastle%20waitlist.%0A%0AEmail:%20' + encodeURIComponent(em);
-  window.closeTicketModal();
-};
 (function initTicketLandingPopup () {
-  var modal = document.getElementById('ticketModal');
-  if (!modal) return;
-  modal.addEventListener('click', function (e) {
-    if (e.target === modal) window.closeTicketModal();
+  var overlay = document.getElementById('ticketOverlay');
+  var closeBtn = document.getElementById('ticketClose');
+  var floatBtn = document.getElementById('ticketFloat');
+  if (!overlay) return;
+  if (closeBtn) closeBtn.addEventListener('click', window.closeTicketModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) window.closeTicketModal();
   });
+  if (floatBtn) floatBtn.addEventListener('click', window.openTicketModal);
   var alreadyShown = false;
-  try { alreadyShown = !!sessionStorage.getItem('aq_ticket_modal_shown'); } catch (err) {}
+  try { alreadyShown = !!sessionStorage.getItem('aq_popup_shown'); } catch (err) {}
   if (!alreadyShown) {
     setTimeout(function () {
       window.openTicketModal();
-      try { sessionStorage.setItem('aq_ticket_modal_shown', '1'); } catch (err) {}
+      try { sessionStorage.setItem('aq_popup_shown', '1'); } catch (err) {}
     }, 700);
   }
 })();
