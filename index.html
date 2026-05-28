@@ -343,7 +343,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   <div class="cookie-modal">
     <div class="cookie-modal-header">
       <h3>Cookie Preferences</h3>
-      <button class="cookie-close" id="cookieCloseBtn">â</button>
+      <button class="cookie-close" id="cookieCloseBtn" aria-label="Close cookie preferences">X</button>
     </div>
     <p>We use cookies to give you the best experience on Aquagroove. Choose which types you're happy for us to use. You can change your mind at any time by clicking the cookie icon in the bottom-left corner.</p>
     <div class="cookie-category">
@@ -375,7 +375,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
 </div>
 
 <!-- COOKIE REVISIT -->
-<button class="cookie-revisit" id="cookieRevisit" title="Cookie preferences">ðª Cookies</button>
+<button class="cookie-revisit" id="cookieRevisit" title="Cookie preferences">Cookie Settings</button>
 
 <!-- NAV -->
 <nav id="nav">
@@ -840,12 +840,21 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
 function openTicketModal(){document.getElementById('ticketModal').classList.add('active');document.body.style.overflow='hidden';}
 function closeTicketModal(){document.getElementById('ticketModal').classList.remove('active');document.body.style.overflow='';}
-document.addEventListener('DOMContentLoaded',function(){var m=document.getElementById('ticketModal');if(m)m.addEventListener('click',function(e){if(e.target===this)closeTicketModal();});});
 function handleTicketEmail(e){e.preventDefault();var em=e.target.querySelector('input').value;window.location.href='mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Waitlist&body=Hi!%20Please%20add%20me%20to%20the%20Aquagroove%20Newcastle%20waitlist.%0A%0AEmail:%20'+encodeURIComponent(em);closeTicketModal();}
-</script><script>
+document.addEventListener('DOMContentLoaded',function(){
+  var m=document.getElementById('ticketModal');
+  if(!m){return;}
+  m.addEventListener('click',function(e){if(e.target===this)closeTicketModal();});
+  if(!sessionStorage.getItem('aq_ticket_modal_shown')){
+    openTicketModal();
+    sessionStorage.setItem('aq_ticket_modal_shown','1');
+  }
+});
+// Nav â hide on scroll down, show on scroll up, bg on scroll
 // Nav â hide on scroll down, show on scroll up, bg on scroll
 const nav = document.getElementById('nav');
 const btt = document.getElementById('btt');
@@ -986,6 +995,5 @@ if (!existing) { showBanner(); } else { revisit.style.display = 'block'; }
     </form>
   </div>
 </div>
-<script>function openTicketModal(){document.getElementById('ticketModal').classList.add('active');document.body.style.overflow='hidden';}function closeTicketModal(){document.getElementById('ticketModal').classList.remove('active');document.body.style.overflow='';}document.addEventListener('DOMContentLoaded',function(){var m=document.getElementById('ticketModal');if(m)m.addEventListener('click',function(e){if(e.target===this)closeTicketModal();});});</script>
 </body>
 </html>
