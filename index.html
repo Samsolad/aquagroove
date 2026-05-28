@@ -840,22 +840,65 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   </div>
 </footer>
 
+<!-- TICKET MODAL -->
+<div id="ticketModal" class="ticket-overlay" role="dialog" aria-modal="true" aria-label="Book Your Spot">
+  <div class="ticket-modal-card">
+    <button class="ticket-modal-close" onclick="closeTicketModal()" aria-label="Close">&times;</button>
+    <p class="ticket-modal-eyebrow">Chapter One &middot; Newcastle</p>
+    <h2 class="ticket-modal-title">Saturday 6th June 2026</h2>
+    <p class="ticket-modal-sub">Swim &middot; Dance &middot; Connect &middot; Small Chops &middot; Only 50 Tickets</p>
+    <div class="ticket-tiers">
+      <div class="ticket-tier"><span class="tier-name">Early Bird</span><span class="tier-price">&pound;12</span><span class="tier-note">First 10 spots</span></div>
+      <div class="ticket-tier featured"><span class="tier-name">Standard</span><span class="tier-price">&pound;18</span><span class="tier-note">General admission</span></div>
+      <div class="ticket-tier"><span class="tier-name">Pair</span><span class="tier-price">&pound;30</span><span class="tier-note">Two people</span></div>
+    </div>
+    <a href="mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Ticket%20Request%20%E2%80%94%20June%206&body=Hi!%20I'd%20like%20to%20book%20a%20ticket%20for%20Aquagroove%20Newcastle%20on%20June%206%2C%202026.%0A%0AName%3A%0ATicket%20type%20(Early%20Bird%20%2F%20Standard%20%2F%20Pair)%3A%0ANumber%20of%20tickets%3A" class="ticket-modal-cta">Secure Your Spot &mdash; Email to Book</a>
+    <p class="ticket-modal-footer">Or join the waitlist and we'll send booking details directly.</p>
+    <form class="ticket-email-form" onsubmit="handleTicketEmail(event)">
+      <input type="email" placeholder="Your email address" required class="ticket-email-input">
+      <button type="submit" class="ticket-email-btn">Join List</button>
+    </form>
+  </div>
+</div>
+
+<script data-cfasync="false">
+window.openTicketModal = function () {
+  var modal = document.getElementById('ticketModal');
+  if (!modal) return;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+window.closeTicketModal = function () {
+  var modal = document.getElementById('ticketModal');
+  if (!modal) return;
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+};
+window.handleTicketEmail = function (e) {
+  e.preventDefault();
+  var em = e.target.querySelector('input').value;
+  window.location.href = 'mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Waitlist&body=Hi!%20Please%20add%20me%20to%20the%20Aquagroove%20Newcastle%20waitlist.%0A%0AEmail:%20' + encodeURIComponent(em);
+  window.closeTicketModal();
+};
+(function initTicketLandingPopup () {
+  var modal = document.getElementById('ticketModal');
+  if (!modal) return;
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) window.closeTicketModal();
+  });
+  var alreadyShown = false;
+  try { alreadyShown = !!sessionStorage.getItem('aq_ticket_modal_shown'); } catch (err) {}
+  if (!alreadyShown) {
+    setTimeout(function () {
+      window.openTicketModal();
+      try { sessionStorage.setItem('aq_ticket_modal_shown', '1'); } catch (err) {}
+    }, 700);
+  }
+})();
+</script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-function openTicketModal(){document.getElementById('ticketModal').classList.add('active');document.body.style.overflow='hidden';}
-function closeTicketModal(){document.getElementById('ticketModal').classList.remove('active');document.body.style.overflow='';}
-function handleTicketEmail(e){e.preventDefault();var em=e.target.querySelector('input').value;window.location.href='mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Waitlist&body=Hi!%20Please%20add%20me%20to%20the%20Aquagroove%20Newcastle%20waitlist.%0A%0AEmail:%20'+encodeURIComponent(em);closeTicketModal();}
-document.addEventListener('DOMContentLoaded',function(){
-  var m=document.getElementById('ticketModal');
-  if(!m){return;}
-  m.addEventListener('click',function(e){if(e.target===this)closeTicketModal();});
-  if(!sessionStorage.getItem('aq_ticket_modal_shown')){
-    openTicketModal();
-    sessionStorage.setItem('aq_ticket_modal_shown','1');
-  }
-});
-// Nav â hide on scroll down, show on scroll up, bg on scroll
-// Nav â hide on scroll down, show on scroll up, bg on scroll
+// Nav — hide on scroll down, show on scroll up, bg on scroll
 const nav = document.getElementById('nav');
 const btt = document.getElementById('btt');
 let lastScroll = 0;
@@ -974,26 +1017,5 @@ modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 const existing = getCookieConsent();
 if (!existing) { showBanner(); } else { revisit.style.display = 'block'; }
 </script>
-
-<!-- TICKET MODAL -->
-<div id="ticketModal" class="ticket-overlay" role="dialog" aria-modal="true" aria-label="Book Your Spot">
-  <div class="ticket-modal-card">
-    <button class="ticket-modal-close" onclick="closeTicketModal()" aria-label="Close">&times;</button>
-    <p class="ticket-modal-eyebrow">Chapter One &middot; Newcastle</p>
-    <h2 class="ticket-modal-title">Saturday 6th June 2026</h2>
-    <p class="ticket-modal-sub">Swim &middot; Dance &middot; Connect &middot; Small Chops &middot; Only 50 Tickets</p>
-    <div class="ticket-tiers">
-      <div class="ticket-tier"><span class="tier-name">Early Bird</span><span class="tier-price">&pound;12</span><span class="tier-note">First 10 spots</span></div>
-      <div class="ticket-tier featured"><span class="tier-name">Standard</span><span class="tier-price">&pound;18</span><span class="tier-note">General admission</span></div>
-      <div class="ticket-tier"><span class="tier-name">Pair</span><span class="tier-price">&pound;30</span><span class="tier-note">Two people</span></div>
-    </div>
-    <a href="mailto:aquagrooveevents@gmail.com?subject=Newcastle%20Ticket%20Request%20%E2%80%94%20June%206&body=Hi!%20I'd%20like%20to%20book%20a%20ticket%20for%20Aquagroove%20Newcastle%20on%20June%206%2C%202026.%0A%0AName%3A%0ATicket%20type%20(Early%20Bird%20%2F%20Standard%20%2F%20Pair)%3A%0ANumber%20of%20tickets%3A" class="ticket-modal-cta">Secure Your Spot &mdash; Email to Book</a>
-    <p class="ticket-modal-footer">Or join the waitlist and we'll send booking details directly.</p>
-    <form class="ticket-email-form" onsubmit="handleTicketEmail(event)">
-      <input type="email" placeholder="Your email address" required class="ticket-email-input">
-      <button type="submit" class="ticket-email-btn">Join List</button>
-    </form>
-  </div>
-</div>
 </body>
 </html>
