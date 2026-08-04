@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Aquagroove â Cultural Wellness Experience</title>
+<title>Aquagroove — Cultural Wellness Experience</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -93,7 +93,7 @@ section{padding:6rem 2.5rem}
 .pillar-card.dance-card{background:var(--rust)}
 .pillar-card.connect-card{background:#2A1F08;border:1px solid rgba(201,149,42,0.25)}
 .pillar-num{font-family:var(--serif);font-size:4rem;font-weight:900;opacity:0.12;position:absolute;top:1rem;right:1.5rem;color:white;line-height:1}
-.pillar-icon{font-size:2rem;margin-bottom:1.5rem}
+.pillar-icon{width:40px;height:40px;border-radius:50%;border:1px solid rgba(245,237,216,0.35);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:0.85rem;color:rgba(245,237,216,0.85);letter-spacing:0.04em}
 .pillar-card h3{font-family:var(--serif);font-size:1.5rem;color:var(--cream);margin-bottom:0.5rem}
 .pillar-card .pillar-freq{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,237,216,0.5);margin-bottom:1rem}
 .pillar-card p{font-size:0.9rem;color:rgba(245,237,216,0.75);line-height:1.7}
@@ -119,7 +119,7 @@ section{padding:6rem 2.5rem}
 
 /* CITIES */
 .cities{background:var(--earth);padding:6rem 2.5rem}
-.cities-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:gap}
+.cities-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
 .cities-header h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);color:var(--cream)}
 .cities-header p{color:rgba(245,237,216,0.5);max-width:320px;font-size:0.9rem;line-height:1.7;text-align:right}
 .cities-list{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
@@ -155,7 +155,7 @@ section{padding:6rem 2.5rem}
 .price-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
 .price-features li{font-size:0.9rem;color:var(--earth);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5}
 .featured .price-features li{color:rgba(245,237,216,0.8)}
-.pf-check{width:16px;height:16px;border-radius:50%;background:rgba(27,107,90,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:10px}
+.pf-check{width:16px;height:16px;border-radius:50%;background:rgba(27,107,90,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;position:relative}.pf-check::after{content:'';width:4px;height:7px;border-right:1.5px solid var(--teal);border-bottom:1.5px solid var(--teal);transform:rotate(45deg) translateY(-1px);margin-top:-2px}.pf-check[style*="opacity:0.35"]::after{width:8px;height:1.5px;border:none;background:currentColor;transform:none;margin:0;opacity:0.7}.featured .pf-check::after{border-color:var(--gold)}
 .featured .pf-check{background:rgba(201,149,42,0.2)}
 .price-btn{display:block;text-align:center;padding:0.9rem;border-radius:2rem;font-size:0.9rem;font-weight:500;text-decoration:none;transition:all 0.25s;border:none;cursor:pointer;width:100%}
 .price-btn-outline{border:1.5px solid var(--earth);color:var(--earth);background:transparent}
@@ -173,7 +173,7 @@ section{padding:6rem 2.5rem}
 .host-text p{color:rgba(245,237,216,0.6);line-height:1.8;margin-bottom:1.5rem;font-size:1rem}
 .host-benefits{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
 .hb{display:flex;align-items:flex-start;gap:1rem}
-.hb-icon{width:40px;height:40px;border-radius:0.75rem;background:rgba(201,149,42,0.1);border:1px solid rgba(201,149,42,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.hb-icon{width:40px;height:40px;border-radius:0.75rem;background:rgba(201,149,42,0.1);border:1px solid rgba(201,149,42,0.2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:0.85rem;color:var(--gold);flex-shrink:0}
 .hb-text h4{font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.2rem}
 .hb-text p{font-size:0.83rem;color:rgba(245,237,216,0.45);line-height:1.5}
 .host-card{background:rgba(201,149,42,0.08);border:1px solid rgba(201,149,42,0.2);border-radius:1.5rem;padding:2.5rem}
@@ -184,7 +184,7 @@ section{padding:6rem 2.5rem}
 .host-royalty{font-size:0.8rem;color:rgba(245,237,216,0.35);margin-bottom:2rem}
 .host-includes{display:flex;flex-direction:column;gap:0.75rem;border-top:1px solid rgba(201,149,42,0.1);padding-top:1.5rem;margin-bottom:2rem}
 .hi{font-size:0.85rem;color:rgba(245,237,216,0.6);display:flex;gap:0.5rem}
-.hi::before{content:'â¦';color:var(--gold);font-size:0.6rem;margin-top:4px;flex-shrink:0}
+.hi::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0}
 
 /* ORIGIN */
 .origin{background:var(--gold-pale)}
@@ -295,7 +295,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
 .cookie-required-tag{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);background:rgba(201,149,42,0.1);padding:0.25rem 0.6rem;border-radius:1rem;border:1px solid rgba(201,149,42,0.2)}
 .cookie-modal-footer{display:flex;gap:0.75rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(217,201,168,0.1);flex-wrap:wrap}
 .cookie-modal-footer .cookie-btn{flex:1;min-width:130px;text-align:center;padding:0.75rem}
-.cookie-revisit{position:fixed;bottom:1.5rem;left:1.5rem;z-index:90;background:rgba(13,13,13,0.8);border:1px solid rgba(201,149,42,0.2);border-radius:2rem;padding:0.4rem 0.9rem;font-size:0.7rem;color:rgba(245,237,216,0.4);cursor:pointer;transition:all 0.2s;font-family:var(--sans);backdrop-filter:blur(8px)}
+.cookie-revisit{display:none;position:fixed;bottom:1.5rem;left:1.5rem;z-index:90;background:rgba(13,13,13,0.8);border:1px solid rgba(201,149,42,0.2);border-radius:2rem;padding:0.4rem 0.9rem;font-size:0.7rem;color:rgba(245,237,216,0.4);cursor:pointer;transition:all 0.2s;font-family:var(--sans);backdrop-filter:blur(8px)}
 .cookie-revisit:hover{color:var(--gold);border-color:rgba(201,149,42,0.4)}
 
 .ticket-overlay{position:fixed;inset:0;z-index:2000;background:rgba(13,13,13,0.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.4s}
@@ -357,14 +357,14 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
         <h4>Strictly Necessary</h4>
         <span class="cookie-required-tag">Always On</span>
       </div>
-      <p class="cookie-cat-desc">These cookies are essential for the website to function. They cannot be switched off. They are usually set in response to actions you take â such as setting privacy preferences or filling in forms.</p>
+      <p class="cookie-cat-desc">These cookies are essential for the website to function. They cannot be switched off. They are usually set in response to actions you take — such as setting privacy preferences or filling in forms.</p>
     </div>
     <div class="cookie-category">
       <div class="cookie-cat-header">
         <h4>Analytics & Performance</h4>
         <label class="toggle"><input type="checkbox" id="toggleAnalytics"/><span class="toggle-slider"></span></label>
       </div>
-      <p class="cookie-cat-desc">These cookies help us understand how visitors interact with Aquagroove â which pages are visited most, where people drop off, and how we can improve. All data is anonymised.</p>
+      <p class="cookie-cat-desc">These cookies help us understand how visitors interact with Aquagroove — which pages are visited most, where people drop off, and how we can improve. All data is anonymised.</p>
     </div>
     <div class="cookie-category">
       <div class="cookie-cat-header">
@@ -422,25 +422,25 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   <div class="hero-content">
     <div class="hero-badge">
       <span></span>
-      Chapter One Â· Newcastle Â· Saturday 6th June
+      Chapter One · Newcastle · Friday 12th June
     </div>
     <h1>Move.<br><em>Groove.</em>Belong.</h1>
-    <p class="hero-sub">A travelling cultural wellness experience rooted in African and Caribbean heritage. Swimming, dance, community â coming to a city near you.</p>
+    <p class="hero-sub">A travelling cultural wellness experience rooted in African and Caribbean heritage. Swimming, dance, community — coming to a city near you.</p>
     <div class="hero-actions">
       <a href="#membership" class="btn-primary">Become a Founding Member</a>
       <a href="#experience" class="btn-secondary">See the Experience</a>
     </div>
     <div class="hero-pillars">
       <div class="hero-pillar">
-        <div class="pillar-dot swim">ð</div>
+        <div class="pillar-dot swim" aria-hidden="true"></div>
         <p>Guided Swim</p>
       </div>
       <div class="hero-pillar">
-        <div class="pillar-dot dance">ð</div>
+        <div class="pillar-dot dance" aria-hidden="true"></div>
         <p>Afro & Caribbean Dance</p>
       </div>
       <div class="hero-pillar">
-        <div class="pillar-dot connect">ð¥</div>
+        <div class="pillar-dot connect" aria-hidden="true"></div>
         <p>Cultural Mixer</p>
       </div>
     </div>
@@ -455,8 +455,8 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
 <!-- EVENT STRIP -->
 <div style="background:var(--gold);padding:1rem 2.5rem;text-align:center;position:relative;z-index:10">
   <p style="font-size:0.9rem;font-weight:500;color:var(--earth);margin:0">
-    ð <strong>First Event: Saturday 6th June 2026 Â· Newcastle</strong> &nbsp;Â·&nbsp; Swim Â· Dance Â· Healthy Drinks Â· Small Chops &nbsp;Â·&nbsp; Only 50 Tickets &nbsp;Â·&nbsp;
-    <a href="#" onclick="openTicketModal();return false;" style="color:var(--earth);font-weight:700;text-decoration:underline">Book Now â Â£30</a>
+    <strong>First Event: Friday 12th June 2026 · Newcastle</strong> &nbsp;·&nbsp; Swim · Dance · Healthy Drinks · Small Chops &nbsp;·&nbsp; Only 25 Tickets &nbsp;·&nbsp;
+    <a href="#" onclick="openTicketModal();return false;" style="color:var(--earth);font-weight:700;text-decoration:underline">Book Now — £30</a>
   </p>
 </div>
 
@@ -467,9 +467,9 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
     <div class="what-grid">
       <div class="what-text fade-in">
         <h2>Not a class.<br>Not a club.<br>A <em style="font-family:var(--serif);color:var(--teal);font-style:italic">community experience.</em></h2>
-        <p>Aquagroove is a half-day cultural wellness event that travels. Every session brings together swim, African and Caribbean dance, and a communal mixer â creating a space where <strong>our culture, our bodies, and our joy</strong> are the whole point.</p>
+        <p>Aquagroove is a half-day cultural wellness event that travels. Every session brings together swim, African and Caribbean dance, and a communal mixer — creating a space where <strong>our culture, our bodies, and our joy</strong> are the whole point.</p>
         <p>We've built something that feels like home the moment you walk in. No mainstream gym energy. No explaining yourself. Just movement, music, food, and the people who get it.</p>
-        <p>Starting in Newcastle as <strong>Chapter One</strong>, Aquagroove is designed to grow city by city â run by local hosts who know their community and are trained in the Aquagroove format.</p>
+        <p>Starting in Newcastle as <strong>Chapter One</strong>, Aquagroove is designed to grow city by city — run by local hosts who know their community and are trained in the Aquagroove format.</p>
       </div>
       <div class="what-visual fade-in">
         <div class="wv-card">
@@ -502,11 +502,11 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
               <div class="wv-stat-label">Sessions per month</div>
             </div>
             <div class="wv-stat">
-              <div class="wv-stat-num">Â£40</div>
+              <div class="wv-stat-num">£40</div>
               <div class="wv-stat-label">Founding rate / mo</div>
             </div>
             <div class="wv-stat">
-              <div class="wv-stat-num">â</div>
+              <div class="wv-stat-num">∞</div>
               <div class="wv-stat-label">Cities coming</div>
             </div>
           </div>
@@ -526,29 +526,29 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
         <div class="section-label" style="color:var(--gold-light)">The Experience</div>
         <h2 style="color:var(--cream)">Three pillars.<br>One unforgettable day.</h2>
       </div>
-      <p style="color:rgba(245,237,216,0.5);line-height:1.8">Every Aquagroove session follows the same proven format â adapted to each city, rooted in the same cultural DNA. Whether you join in Newcastle or Birmingham, the feeling is the same.</p>
+      <p style="color:rgba(245,237,216,0.5);line-height:1.8">Every Aquagroove session follows the same proven format — adapted to each city, rooted in the same cultural DNA. Whether you join in Newcastle or Birmingham, the feeling is the same.</p>
     </div>
     <div class="pillars-grid">
       <div class="pillar-card swim-card fade-in">
         <div class="pillar-num">01</div>
-        <div class="pillar-icon">ð</div>
+        <div class="pillar-icon" aria-hidden="true">01</div>
         <h3>The Water</h3>
-        <div class="pillar-freq">2Ã per month Â· 90 minutes</div>
-        <p>Community swim sessions with music, warmth, and a facilitator in the water. Open to all levels â from confident swimmers to those still building confidence. The pool is ours.</p>
+        <div class="pillar-freq">2× per month · 90 minutes</div>
+        <p>Community swim sessions with music, warmth, and a facilitator in the water. Open to all levels — from confident swimmers to those still building confidence. The pool is ours.</p>
       </div>
       <div class="pillar-card dance-card fade-in" style="transition-delay:0.1s">
         <div class="pillar-num">02</div>
-        <div class="pillar-icon">ð</div>
+        <div class="pillar-icon" aria-hidden="true">02</div>
         <h3>The Movement</h3>
-        <div class="pillar-freq">2Ã per month Â· 90 minutes</div>
-        <p>Afrobeats, Dancehall, Soca, West African styles. A live DJ, an open floor, taught patterns. No experience needed â just a willingness to move and connect with the rhythm in the room.</p>
+        <div class="pillar-freq">2× per month · 90 minutes</div>
+        <p>Afrobeats, Dancehall, Soca, West African styles. A live DJ, an open floor, taught patterns. No experience needed — just a willingness to move and connect with the rhythm in the room.</p>
       </div>
       <div class="pillar-card connect-card fade-in" style="transition-delay:0.2s">
         <div class="pillar-num">03</div>
-        <div class="pillar-icon">ð¥</div>
+        <div class="pillar-icon" aria-hidden="true">03</div>
         <h3>The Mixer</h3>
-        <div class="pillar-freq">1Ã per month Â· 2 hours</div>
-        <p>Food, music, real conversations. Each mixer is themed â a country, a season, a celebration. This is where strangers become community, and where the Aquagroove story grows.</p>
+        <div class="pillar-freq">1× per month · 2 hours</div>
+        <p>Food, music, real conversations. Each mixer is themed — a country, a season, a celebration. This is where strangers become community, and where the Aquagroove story grows.</p>
       </div>
     </div>
   </div>
@@ -559,18 +559,18 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   <div class="container">
     <div class="section-label">How It Works</div>
     <h2>Built to travel.<br>Designed to last.</h2>
-    <p class="section-intro">Aquagroove starts in one city, proves the format, then moves. Every city we touch becomes a permanent chapter â run by a local host, powered by the Aquagroove playbook.</p>
+    <p class="section-intro">Aquagroove starts in one city, proves the format, then moves. Every city we touch becomes a permanent chapter — run by a local host, powered by the Aquagroove playbook.</p>
     <div class="steps">
       <div class="step fade-in">
         <div class="step-num">01</div>
         <h3>We launch in your city</h3>
-        <p>The Aquagroove founder runs the first event personally â building the local community, testing the format, and finding the right local host.</p>
+        <p>The Aquagroove founder runs the first event personally — building the local community, testing the format, and finding the right local host.</p>
         <div class="step-connector"></div>
       </div>
       <div class="step fade-in" style="transition-delay:0.1s">
         <div class="step-num">02</div>
         <h3>We hand off the playbook</h3>
-        <p>A local community leader is trained and licensed to run Aquagroove independently â with full brand support, marketing assets, and the complete operational manual.</p>
+        <p>A local community leader is trained and licensed to run Aquagroove independently — with full brand support, marketing assets, and the complete operational manual.</p>
         <div class="step-connector"></div>
       </div>
       <div class="step fade-in" style="transition-delay:0.2s">
@@ -581,17 +581,17 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
     </div>
     <div class="timeline fade-in">
       <div class="tl-phase">
-        <div class="tl-tag">Phase A Â· Now</div>
+        <div class="tl-tag">Phase A · Now</div>
         <div class="tl-title">Prove It</div>
-        <div class="tl-cities" style="color:rgba(245,237,216,0.5)">Newcastle â Chapter One<br>Building the format. Selling 30 founding spots. Documenting everything.</div>
+        <div class="tl-cities" style="color:rgba(245,237,216,0.5)">Newcastle — Chapter One<br>Building the format. Selling 30 founding spots. Documenting everything.</div>
       </div>
       <div class="tl-phase">
-        <div class="tl-tag">Phase B Â· Months 4â8</div>
+        <div class="tl-tag">Phase B · Months 4–8</div>
         <div class="tl-title">Tour It</div>
-        <div class="tl-cities" style="color:rgba(245,237,216,0.5)">Leeds Â· Birmingham Â· Manchester<br>Founder-led events in 3 cities. Testing what travels.</div>
+        <div class="tl-cities" style="color:rgba(245,237,216,0.5)">Leeds · Birmingham · Manchester<br>Founder-led events in 3 cities. Testing what travels.</div>
       </div>
       <div class="tl-phase">
-        <div class="tl-tag">Phase C Â· Month 9+</div>
+        <div class="tl-tag">Phase C · Month 9+</div>
         <div class="tl-title">Scale It</div>
         <div class="tl-cities" style="color:rgba(245,237,216,0.5)">UK-wide + beyond<br>Licensed hosts in every chapter city. Aquagroove runs without the founder.</div>
       </div>
@@ -605,28 +605,28 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
     <div class="section-label" style="color:var(--gold-light)">Cities</div>
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem">
       <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);color:var(--cream)">Where we're<br>going next.</h2>
-      <p style="color:rgba(245,237,216,0.4);max-width:280px;font-size:0.9rem;line-height:1.7;text-align:right">Comment your city on our socials â every response helps us decide where Chapter Two lands.</p>
+      <p style="color:rgba(245,237,216,0.4);max-width:280px;font-size:0.9rem;line-height:1.7;text-align:right">Comment your city on our socials — every response helps us decide where Chapter Two lands.</p>
     </div>
     <div class="cities-list">
       <div class="city-card fade-in">
-        <div class="city-status status-active">Chapter One Â· Active</div>
+        <div class="city-status status-active">Chapter One · Active</div>
         <div class="city-name">Newcastle</div>
-        <div class="city-detail">North East England Â· Est. 2026</div>
+        <div class="city-detail">North East England · Est. 2026</div>
       </div>
       <div class="city-card fade-in" style="transition-delay:0.08s">
         <div class="city-status status-soon">Coming Soon</div>
         <div class="city-name">Leeds</div>
-        <div class="city-detail">Yorkshire Â· 2026</div>
+        <div class="city-detail">Yorkshire · 2026</div>
       </div>
       <div class="city-card fade-in" style="transition-delay:0.16s">
         <div class="city-status status-soon">Coming Soon</div>
         <div class="city-name">Birmingham</div>
-        <div class="city-detail">West Midlands Â· 2026</div>
+        <div class="city-detail">West Midlands · 2026</div>
       </div>
       <div class="city-card fade-in" style="transition-delay:0.24s">
         <div class="city-status status-open">Host Opportunity</div>
         <div class="city-name">Your City</div>
-        <div class="city-detail">Enquire about hosting â</div>
+        <div class="city-detail">Enquire about hosting →</div>
       </div>
     </div>
   </div>
@@ -637,56 +637,56 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   <div class="container">
     <div class="section-label">Membership</div>
     <h2>Join the circle.</h2>
-    <p class="section-intro">Whether you want to experience Aquagroove as a member, attend a single event, or bring it to your city â there's a place for you.</p>
+    <p class="section-intro">Whether you want to experience Aquagroove as a member, attend a single event, or bring it to your city — there's a place for you.</p>
     <div class="pricing-grid">
       <div class="price-card fade-in">
         <div class="price-label">Taster Pass</div>
-        <div class="price-amount" style="color:var(--earth)">Â£15</div>
-        <div class="price-period">per event Â· mixer only Â· 7th June</div>
+        <div class="price-amount" style="color:var(--earth)">£15</div>
+        <div class="price-period">per event · mixer only · 12th June</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><span class="pf-check">â</span>Monthly cultural mixer</li>
-          <li><span class="pf-check">â</span>Food &amp; music included</li>
-          <li><span class="pf-check">â</span>No commitment required</li>
-          <li><span class="pf-check" style="opacity:0.35">â</span><span style="opacity:0.45">Swim &amp; dance sessions</span></li>
-          <li><span class="pf-check" style="opacity:0.35">â</span><span style="opacity:0.45">Priority booking</span></li>
-          <li><span class="pf-check" style="opacity:0.35">â</span><span style="opacity:0.45">Members community</span></li>
+          <li><span class="pf-check"></span>Monthly cultural mixer</li>
+          <li><span class="pf-check"></span>Food &amp; music included</li>
+          <li><span class="pf-check"></span>No commitment required</li>
+          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Swim &amp; dance sessions</span></li>
+          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Priority booking</span></li>
+          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Members community</span></li>
         </ul>
         <a href="#" onclick="openTicketModal();return false;" class="price-btn price-btn-outline" style="display:block;text-align:center;text-decoration:none">Get a Taster Ticket</a>
-        <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;line-height:1.5">Want to come back? Founding membership is just Â£5 more per month â and you'll never pay per session again.</p>
+        <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;line-height:1.5">Want to come back? Founding membership is just £5 more per month — and you'll never pay per session again.</p>
       </div>
       <div class="price-card featured fade-in" style="transition-delay:0.1s">
-        <div class="featured-badge">â³ 30 Spots Only</div>
+        <div class="featured-badge">30 Spots Only</div>
         <div class="price-label">Founding Membership</div>
-        <div class="price-amount">Â£40</div>
-        <div class="price-period">per month Â· rate locked for 12 months</div>
+        <div class="price-amount">£40</div>
+        <div class="price-period">per month · rate locked for 12 months</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>2Ã guided swim sessions/month</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>2Ã dance sessions/month</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>Monthly cultural mixer</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>Priority booking â members first</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>Members-only community access</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>Named on Chapter One founding wall</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>Founding Member certificate</li>
-          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)">â</span>Rate locked â standard rises to Â£60/mo</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>2× guided swim sessions/month</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>2× dance sessions/month</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>Monthly cultural mixer</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>Priority booking — members first</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>Members-only community access</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>Named on Chapter One founding wall</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>Founding Member certificate</li>
+          <li><span class="pf-check" style="background:rgba(201,149,42,0.2)"></span>Rate locked — standard rises to £60/mo</li>
         </ul>
         <a href="https://aquagroove.co.uk/membership" class="price-btn price-btn-gold" style="display:block;text-align:center;text-decoration:none">Claim Your Founding Spot</a>
       </div>
       <div class="price-card fade-in" style="transition-delay:0.2s">
         <div class="price-label">Day Experience</div>
-        <div class="price-amount" style="color:var(--earth)">Â£30</div>
-        <div class="price-period">per person Â· all three sessions Â· 7th June</div>
+        <div class="price-amount" style="color:var(--earth)">£30</div>
+        <div class="price-period">per person · all three sessions · 12th June</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><span class="pf-check">â</span>Swim session</li>
-          <li><span class="pf-check">â</span>Dance session</li>
-          <li><span class="pf-check">â</span>Cultural mixer</li>
-          <li><span class="pf-check">â</span>Walk-up subject to availability</li>
-          <li><span class="pf-check" style="opacity:0.35">â</span><span style="opacity:0.45">Priority booking</span></li>
-          <li><span class="pf-check" style="opacity:0.35">â</span><span style="opacity:0.45">Members community &amp; exclusives</span></li>
+          <li><span class="pf-check"></span>Swim session</li>
+          <li><span class="pf-check"></span>Dance session</li>
+          <li><span class="pf-check"></span>Cultural mixer</li>
+          <li><span class="pf-check"></span>Walk-up subject to availability</li>
+          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Priority booking</span></li>
+          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Members community &amp; exclusives</span></li>
         </ul>
-        <a href="#" onclick="openTicketModal();return false;" class="price-btn price-btn-teal" style="display:block;text-align:center;text-decoration:none">Book Your Spot â Â£30</a>
+        <a href="#" onclick="openTicketModal();return false;" class="price-btn price-btn-teal" style="display:block;text-align:center;text-decoration:none">Book Your Spot — £30</a>
         <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;line-height:1.5">Attend once to experience it. Members always get priority access to every session.</p>
       </div>
     </div>
@@ -700,31 +700,31 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
       <div class="host-text fade-in">
         <div class="section-label">Host a City</div>
         <h2>Bring Aquagroove<br>to your city.</h2>
-        <p>Are you a community builder, wellness entrepreneur, or cultural organiser? We're looking for passionate local hosts who want to run Aquagroove in their city â with the full brand, playbook, and support behind them.</p>
+        <p>Are you a community builder, wellness entrepreneur, or cultural organiser? We're looking for passionate local hosts who want to run Aquagroove in their city — with the full brand, playbook, and support behind them.</p>
         <div class="host-benefits">
           <div class="hb">
-            <div class="hb-icon">ð</div>
+            <div class="hb-icon" aria-hidden="true">01</div>
             <div class="hb-text">
               <h4>Full Aquagroove Playbook</h4>
               <p>Every template, run sheet, venue guide, and marketing asset. You don't build from scratch.</p>
             </div>
           </div>
           <div class="hb">
-            <div class="hb-icon">ð¨</div>
+            <div class="hb-icon" aria-hidden="true">02</div>
             <div class="hb-text">
               <h4>Brand & Marketing Support</h4>
               <p>Use the Aquagroove name, assets, and social media support from the central brand.</p>
             </div>
           </div>
           <div class="hb">
-            <div class="hb-icon">ð¤</div>
+            <div class="hb-icon" aria-hidden="true">03</div>
             <div class="hb-text">
               <h4>Direct Founder Access</h4>
               <p>Onboarding, training, and ongoing mentorship from the Aquagroove founder.</p>
             </div>
           </div>
           <div class="hb">
-            <div class="hb-icon">ð°</div>
+            <div class="hb-icon" aria-hidden="true">04</div>
             <div class="hb-text">
               <h4>Your Own Revenue</h4>
               <p>You keep the majority of ticket and membership income. You're the host, not an employee.</p>
@@ -734,12 +734,12 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
         <a href="#newsletter" class="btn-primary" style="display:inline-block;text-decoration:none">Apply to Host a City</a>
       </div>
       <div class="host-card fade-in" style="transition-delay:0.15s">
-        <div class="host-card-label">Host Licence â Year 1</div>
+        <div class="host-card-label">Host Licence — Year 1</div>
         <div class="host-price-row">
-          <div class="host-price">Â£800</div>
+          <div class="host-price">£800</div>
           <div class="host-price-desc">upfront licence fee</div>
         </div>
-        <div class="host-royalty">+ 10â15% royalty on ticket revenue per event</div>
+        <div class="host-royalty">+ 10–15% royalty on ticket revenue per event</div>
         <div class="host-includes">
           <div class="hi">Full Aquagroove brand licence for your city</div>
           <div class="hi">Complete operational playbook & templates</div>
@@ -756,7 +756,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
 </section>
 
 <!-- ORIGIN STORY -->
-<section class="origin">
+<section class="origin" id="origin">
   <div class="container">
     <div class="origin-inner">
       <div class="origin-visual fade-in">
@@ -771,10 +771,10 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
       <div class="origin-text fade-in" style="transition-delay:0.15s">
         <div class="section-label">Our Story</div>
         <h2>Built in Newcastle.<br>Made for every city.</h2>
-        <p>Aquagroove started from a simple observation: wellness spaces in the UK weren't built for our communities. The pools, the studios, the gyms â they existed, but they didn't feel like ours.</p>
-        <p>So we built something that does. Not a gym class. Not a hobby group. A full cultural wellness experience â swim, dance, community â where African and Caribbean heritage isn't the footnote. <strong>It's the whole point.</strong></p>
-        <p>We're documenting the entire build â the venue hunts, the first sessions, the founding members, the chaos and the joy â on YouTube. Because we want you to see exactly how this is made, so you know it's real.</p>
-        <a href="https://youtube.com" class="origin-cta">Watch the build on YouTube â</a>
+        <p>Aquagroove started from a simple observation: wellness spaces in the UK weren't built for our communities. The pools, the studios, the gyms — they existed, but they didn't feel like ours.</p>
+        <p>So we built something that does. Not a gym class. Not a hobby group. A full cultural wellness experience — swim, dance, community — where African and Caribbean heritage isn't the footnote. <strong>It's the whole point.</strong></p>
+        <p>We're documenting the entire build — the venue hunts, the first sessions, the founding members, the chaos and the joy — on YouTube. Because we want you to see exactly how this is made, so you know it's real.</p>
+        <a href="https://youtube.com" class="origin-cta">Watch the build on YouTube →</a>
       </div>
     </div>
   </div>
@@ -785,7 +785,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
   <div class="container">
     <div class="section-label" style="justify-content:center;color:var(--gold-light)">Stay Connected</div>
     <h2>Be first to know<br>when we hit your city.</h2>
-    <p>Drop your email and city below. We'll let you know the moment Aquagroove is heading your way â and send you a front-row seat.</p>
+    <p>Drop your email and city below. We'll let you know the moment Aquagroove is heading your way — and send you a front-row seat.</p>
     <div class="newsletter-form">
       <input type="email" placeholder="Your email address"/>
       <button type="button">Notify Me</button>
@@ -840,7 +840,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Â© 2026 Aquagroove. All rights reserved. Chapter One â Newcastle, UK. Â· <a href="https://www.aquagroove.co.uk" style="color:rgba(245,237,216,0.3);text-decoration:none">www.aquagroove.co.uk</a></p>
+      <p>© 2026 Aquagroove. All rights reserved. Chapter One — Newcastle, UK. · <a href="https://www.aquagroove.co.uk" style="color:rgba(245,237,216,0.3);text-decoration:none">www.aquagroove.co.uk</a></p>
       <p style="color:rgba(245,237,216,0.15)">Built with purpose. Rooted in culture.</p>
     </div>
   </div>
@@ -852,8 +852,8 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
     <button class="ticket-modal-close" id="ticketClose" type="button" aria-label="Close">X</button>
     <div class="ticket-modal-body">
       <div class="ticket-label">Chapter One &middot; Newcastle</div>
-      <h2 class="ticket-title">Aquagroove<br>6th June 2026</h2>
-      <p class="ticket-date">City Baths, Newcastle &nbsp;&middot;&nbsp; 1PM - 4PM &nbsp;&middot;&nbsp; Limited to 20</p>
+      <h2 class="ticket-title">Aquagroove<br>12th June 2026</h2>
+      <p class="ticket-date">City Baths, Newcastle &nbsp;&middot;&nbsp; 1PM - 4PM &nbsp;&middot;&nbsp; Limited to 25</p>
       <div class="ticket-divider"></div>
 
       <a href="https://buy.stripe.com/14A7sN6Ih82De2b2TX9IQ00" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
@@ -933,7 +933,6 @@ window.closeTicketModal = function () {
   }
 })();
 </script>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
 // Nav — hide on scroll down, show on scroll up, bg on scroll
 const nav = document.getElementById('nav');
@@ -972,7 +971,9 @@ fadeEls.forEach(el => observer.observe(el));
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
@@ -981,8 +982,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 document.querySelector('.newsletter-form button').addEventListener('click', function() {
   const input = document.querySelector('.newsletter-form input');
   if (input.value && input.value.includes('@')) {
-    this.textContent = 'You\'re on the list â¦';
-    e = 'background:#1B6B5A';
+    this.textContent = "You're on the list";
+    this.style.background = '#1B6B5A';
+    this.style.color = '#FAF6EE';
     input.value = '';
     input.placeholder = 'See you soon!';
   } else {
@@ -991,7 +993,7 @@ document.querySelector('.newsletter-form button').addEventListener('click', func
   }
 });
 
-// ââ COOKIE CONSENT ââââââââââââââââââââââââââââââââââââââââââââââââ
+// --- COOKIE CONSENT ---
 const COOKIE_KEY = 'aq_cookie_consent';
 
 function getCookieConsent() {
