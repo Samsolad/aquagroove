@@ -138,7 +138,7 @@ section{padding:6rem 2.5rem}
 .membership{background:var(--cream)}
 .membership h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}
 .membership .section-intro{color:var(--mid);max-width:560px;line-height:1.8;margin-bottom:4rem}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:820px}
 .price-card{border-radius:1.5rem;padding:2.5rem;border:1px solid var(--line);background:white;position:relative;transition:transform 0.3s,box-shadow 0.3s}
 .price-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(26,18,8,0.1)}
 .price-card.featured{background:var(--earth);border-color:var(--gold)}
@@ -639,23 +639,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
     <h2>Join the circle.</h2>
     <p class="section-intro">Whether you want to experience Aquagroove as a member, attend a single event, or bring it to your city — there's a place for you.</p>
     <div class="pricing-grid">
-      <div class="price-card fade-in">
-        <div class="price-label">Taster Pass</div>
-        <div class="price-amount" style="color:var(--earth)">£15</div>
-        <div class="price-period">per event · mixer only · 12th September</div>
-        <div class="price-divider"></div>
-        <ul class="price-features">
-          <li><span class="pf-check"></span>Monthly cultural mixer</li>
-          <li><span class="pf-check"></span>Food &amp; music included</li>
-          <li><span class="pf-check"></span>No commitment required</li>
-          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Swim &amp; dance sessions</span></li>
-          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Priority booking</span></li>
-          <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Members community</span></li>
-        </ul>
-        <a href="#" onclick="openTicketModal();return false;" class="price-btn price-btn-outline" style="display:block;text-align:center;text-decoration:none">Get a Taster Ticket</a>
-        <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;line-height:1.5">Want to come back? Founding membership is just £5 more per month — and you'll never pay per session again.</p>
-      </div>
-      <div class="price-card featured fade-in" style="transition-delay:0.1s">
+      <div class="price-card featured fade-in">
         <div class="featured-badge">30 Spots Only</div>
         <div class="price-label">Founding Membership</div>
         <div class="price-amount">£40</div>
@@ -673,16 +657,16 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
         </ul>
         <a href="https://aquagroove.co.uk/membership" class="price-btn price-btn-gold" style="display:block;text-align:center;text-decoration:none">Claim Your Founding Spot</a>
       </div>
-      <div class="price-card fade-in" style="transition-delay:0.2s">
-        <div class="price-label">Day Experience</div>
+      <div class="price-card fade-in" style="transition-delay:0.1s">
+        <div class="price-label">Full Day Pass</div>
         <div class="price-amount" style="color:var(--earth)">£30</div>
-        <div class="price-period">per person · all three sessions · 12th September</div>
+        <div class="price-period">per person · swim, dance &amp; mixer · 12th September</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><span class="pf-check"></span>Swim session</li>
-          <li><span class="pf-check"></span>Dance session</li>
-          <li><span class="pf-check"></span>Cultural mixer</li>
-          <li><span class="pf-check"></span>Walk-up subject to availability</li>
+          <li><span class="pf-check"></span>Guided swim session</li>
+          <li><span class="pf-check"></span>Dance / cardio session</li>
+          <li><span class="pf-check"></span>Cultural mixer with food &amp; drinks</li>
+          <li><span class="pf-check"></span>Full half-day experience</li>
           <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Priority booking</span></li>
           <li><span class="pf-check" style="opacity:0.35"></span><span style="opacity:0.45">Members community &amp; exclusives</span></li>
         </ul>
@@ -823,7 +807,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
         <h4>Join</h4>
         <ul>
           <li><a href="#membership">Founding Membership</a></li>
-          <li><a href="#membership">Day Pass</a></li>
+          <li><a href="#membership">Full Day Pass</a></li>
           <li><a href="#host">Host a City</a></li>
           <li><a href="#newsletter">Stay Updated</a></li>
         </ul>
@@ -862,34 +846,7 @@ footer{background:var(--night);padding:4rem 2.5rem 2rem}
           <span class="ticket-tier-name">Full Day Pass</span>
           <span class="ticket-tier-price">&pound;30</span>
         </div>
-        <div class="ticket-tier-detail">Swim (75 min) &middot; Dance/Cardio (75 min) &middot; Cultural Mixer (30 min)<br>Best value - all three sessions</div>
-      </div></a>
-
-      <a href="https://buy.stripe.com/8x200l6Ih96H3nx3Y19IQ01" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
-      <div class="ticket-tier">
-        <div class="ticket-tier-header">
-          <span class="ticket-tier-name">Swim Session</span>
-          <span class="ticket-tier-price">&pound;20</span>
-        </div>
-        <div class="ticket-tier-detail">75 minutes &middot; Guided community swim</div>
-      </div></a>
-
-      <a href="https://buy.stripe.com/00w14pgiR5Uve2b3Y19IQ02" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
-      <div class="ticket-tier">
-        <div class="ticket-tier-header">
-          <span class="ticket-tier-name">Dance / Cardio</span>
-          <span class="ticket-tier-price">&pound;20</span>
-        </div>
-        <div class="ticket-tier-detail">75 minutes &middot; African &amp; Caribbean cardio dance</div>
-      </div></a>
-
-      <a href="https://buy.stripe.com/28EdRb3w582D9LVcux9IQ03" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
-      <div class="ticket-tier">
-        <div class="ticket-tier-header">
-          <span class="ticket-tier-name">Cultural Mixer</span>
-          <span class="ticket-tier-price">&pound;15</span>
-        </div>
-        <div class="ticket-tier-detail">30 minutes &middot; Food, drinks &amp; community</div>
+        <div class="ticket-tier-detail">Swim (75 min) &middot; Dance/Cardio (75 min) &middot; Cultural Mixer (30 min)<br>The complete Aquagroove experience</div>
       </div></a>
 
       <div class="ticket-divider"></div>
